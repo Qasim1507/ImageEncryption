@@ -51,7 +51,7 @@ def main():
                     key_file.write(f'{k}\n')
             st.write("Image encrypted successfully.")
             st.write("Encryption key saved in key.txt.")
-            #st.download_button(label="Download Encrypted Image", data=open(encrypted_image_path, 'rb').read(), file_name='encrypted_image.png', mime='image/png')
+            st.download_button(label="Download Encrypted Image", data=open(encrypted_image_path, 'rb').read(), file_name='encrypted_image.png', mime='image/png')
     elif encryption_choice == "Decrypt":
         st.subheader("Decryption")
         uploaded_encrypted_image = st.file_uploader("Upload the encrypted image", type=["jpg", "png", "jpeg"])
@@ -71,7 +71,7 @@ def main():
             decrypted_image_path = 'decrypted_image.png'
             decrypted_image.save(decrypted_image_path)
             st.write("Image decrypted successfully.")
-            #st.download_button(label="Download Decrypted Image", data=open(decrypted_image_path, 'rb').read(), file_name='decrypted_image.png', mime='image/png')
+            st.download_button(label="Download Decrypted Image", data=open(decrypted_image_path, 'rb').read(), file_name='decrypted_image.png', mime='image/png')
 
 if __name__ == '__main__':
     main()
