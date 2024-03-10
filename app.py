@@ -52,6 +52,7 @@ def main():
             st.write("Image encrypted successfully.")
             st.write("Encryption key saved in key.txt.")
             st.download_button(label="Download Encrypted Image", data=open(encrypted_image_path, 'rb').read(), file_name='encrypted_image.png', mime='image/png')
+            st.download_button(label="Download Encryption Key", data=open('key.txt', 'rb').read(), file_name='key.txt', mime='text/plain')
     elif encryption_choice == "Decrypt":
         st.subheader("Decryption")
         uploaded_encrypted_image = st.file_uploader("Upload the encrypted image", type=["jpg", "png", "jpeg"])
