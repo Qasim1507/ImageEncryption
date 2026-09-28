@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import random
 from PIL import Image
 import streamlit as st
